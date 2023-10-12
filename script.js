@@ -4,14 +4,13 @@ console.log(randomNumber);
 const lastGuess = document.querySelector(".lastGuess");
 const help = document.querySelector(".help");
 const result = document.querySelector(".result");
-
+let resetButton = document.querySelector(".newGame");
 
 const submitBtn = document.querySelector(".submitBtn");
 const guessField = document.querySelector(".guessField");
 
 
 let guessCount = 1;
-let resetButton;
 
 submitBtn.addEventListener('click',checkGuess)
 
@@ -44,9 +43,11 @@ function checkGuess(){
 function setGameOver(){
     guessField.disabled ="true";
     submitBtn.disabled = "true";
-    resetButton = document.createElement("button");
-    resetButton.textContent = "Start new Game";
-    document.body.append(resetButton);
+    // resetButton = document.createElement("button");
+    // resetButton.textContent = "Start new Game";
+    // document.body.append(resetButton);
+    
+    resetButton.style.visibility="visible";    
     resetButton.addEventListener("click",resetGame);
    
 }
@@ -58,7 +59,7 @@ function resetGame(){
     for(const resetPara of resetParas){
         resetPara.textContent=""
     }
-    resetButton.parentNode.removeChild(resetButton);
+    resetButton.style.visibility="hidden"
 
     guessField.disabled =false;
     submitBtn.disabled = false;

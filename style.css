@@ -30,6 +30,16 @@
 }
 
 .resultArea{
-    padding: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 90px;
     height:20px;
+}
+
+.resultArea p{
+   padding-top: 10px;
+}
+
+.newGame{
+   visibility: hidden;   
 }
