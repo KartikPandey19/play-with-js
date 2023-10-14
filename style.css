@@ -40,6 +40,14 @@
    padding-top: 10px;
 }
 
+.lastGuesst{
+    visibility: hidden;   
+ }
+
+ .lastGuess{
+    display: inline;  
+ }
+
 .newGame{
    visibility: hidden;   
 }

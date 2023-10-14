@@ -2,6 +2,8 @@ let randomNumber = Math.floor(Math.random()*100);
 console.log(randomNumber);
 
 const lastGuess = document.querySelector(".lastGuess");
+const lastGuesst = document.querySelector(".lastGuesst");
+
 const help = document.querySelector(".help");
 const result = document.querySelector(".result");
 let resetButton = document.querySelector(".newGame");
@@ -16,6 +18,7 @@ submitBtn.addEventListener('click',checkGuess)
 
 function checkGuess(){
     const userGuess = Number(guessField.value);
+    let presult=[];
     if(userGuess===randomNumber){
         result.textContent="Congratulation! You got it right";
         result.style.backgroundColor="green";
@@ -26,6 +29,12 @@ function checkGuess(){
         help.textContent="";
         setGameOver();
     }else{
+        // presult[guessCount] = userGuess;
+        // presult.push(presult[guessCount]);
+
+        presult.push(userGuess.toString());
+        lastGuesst.style.visibility = "visible";
+        lastGuess.textContent += presult+' ';
         result.textContent="oops! Wrong";
         result.style.backgroundColor="red";
         if(userGuess<randomNumber){
@@ -60,6 +69,8 @@ function resetGame(){
         resetPara.textContent=""
     }
     resetButton.style.visibility="hidden"
+    lastGuesst.style.visibility="hidden"
+
 
     guessField.disabled =false;
     submitBtn.disabled = false;
