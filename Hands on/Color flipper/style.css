@@ -1,0 +1,51 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+background-color:orange;
+}
+
+
+
+.detail{
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 213px;
+    margin-left: 309px;
+    margin-right: 261px;
+}
+
+.name{
+    display: flex;
+    justify-content: center;
+    padding: 2px 225px;
+    border: 2px  solid;
+    border-radius: 8px;
+    background-color: black;
+    color: white;
+    width: auto;
+    font-size: large;
+    font-weight: bolder;
+    border: none;
+    
+}
+
+.name p{
+    
+    padding:4px;
+}
+
+.clickMe{
+    padding: 5px;
+    margin-top: 10px;
+}
+
+
+
+.colorName{
+    color:skyblue
+}
